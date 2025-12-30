@@ -126,5 +126,67 @@ fetch("https://counter.slaya7.workers.dev", { method: "POST" })
     document.getElementById("viewCount").textContent = "—";
   });
 </script>
+<!-- Adblock Overlay -->
+<div id="adblock-overlay" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+  <div class="w-full max-w-md rounded-2xl bg-white p-6 text-center shadow-xl">
+    <h2 class="text-xl font-semibold text-gray-900">Adblock Detected</h2>
+    <p class="mt-2 text-sm text-gray-600">
+      Ads help keep this site online. Please disable your ad blocker to continue.
+    </p>
+
+    <div class="mt-6 flex gap-3 justify-center">
+      <button
+        id="adblock-refresh"
+        class="rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition">
+        Refresh Page
+      </button>
+
+      <button
+        id="adblock-check"
+        class="rounded-lg border border-blue-600 px-5 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50 transition">
+        I’ve Disabled It
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+const checkAdblock = () => {
+  return new Promise((resolve) => {
+    const config = { method: "HEAD", mode: "no-cors" };
+    Promise.all([
+      fetch(new Request("https://static.ads-twitter.com/uwt.js", config)),
+      fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", config))
+    ]).then(() => {
+      resolve(false);
+    }).catch(() => {
+      resolve(true);
+    });
+  });
+};
+
+async function handleAdblock() {
+  const hasAdblock = await checkAdblock();
+  const overlay = document.getElementById("adblock-overlay");
+
+  if (hasAdblock && overlay) {
+    overlay.classList.remove("hidden");
+    overlay.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+document.getElementById("adblock-refresh")?.addEventListener("click", () => {
+  location.reload();
+});
+
+document.getElementById("adblock-check")?.addEventListener("click", async () => {
+  const stillBlocked = await checkAdblock();
+  if (!stillBlocked) {
+    location.reload();
+  }
+});
+
+handleAdblock();
+</script>
 </body>
 </html>
