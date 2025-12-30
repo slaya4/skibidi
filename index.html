@@ -133,19 +133,9 @@ fetch("https://counter.slaya7.workers.dev", { method: "POST" })
     <p class="mt-2 text-sm text-gray-600">
       Ads help keep this site online. Please disable your ad blocker to continue.
     </p>
-
     <div class="mt-6 flex gap-3 justify-center">
-      <button
-        id="adblock-refresh"
-        class="rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition">
-        Refresh Page
-      </button>
-
-      <button
-        id="adblock-check"
-        class="rounded-lg border border-blue-600 px-5 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50 transition">
-        I’ve Disabled It
-      </button>
+      <button id="adblock-refresh" class="rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition">Refresh Page</button>
+      <button id="adblock-check" class="rounded-lg border border-blue-600 px-5 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50 transition">I’ve Disabled It</button>
     </div>
   </div>
 </div>
@@ -163,7 +153,6 @@ const checkAdblock = () => {
     });
   });
 };
-
 async function handleAdblock() {
   const hasAdblock = await checkAdblock();
   const overlay = document.getElementById("adblock-overlay");
@@ -174,18 +163,15 @@ async function handleAdblock() {
     document.body.style.overflow = "hidden";
   }
 }
-
 document.getElementById("adblock-refresh")?.addEventListener("click", () => {
   location.reload();
 });
-
 document.getElementById("adblock-check")?.addEventListener("click", async () => {
   const stillBlocked = await checkAdblock();
   if (!stillBlocked) {
     location.reload();
   }
 });
-
 handleAdblock();
 </script>
 </body>
