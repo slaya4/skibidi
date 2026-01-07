@@ -116,14 +116,43 @@
     }
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Slayas Site",
-    "url": "https://slayas.site/",
-    "description": "Premium game tools & high-performance modifications."
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://slayas.site/#person",
+      "name": "Slayas",
+      "url": "https://slayas.site/",
+      "sameAs": [
+        "https://www.youtube.com/@slaya4",
+        "https://www.instagram.com/slayax7",
+        "https://x.com/@slayax7"
+      ],
+      "jobTitle": "Game Tools Developer",
+      "description": "Creator of premium game mods and high-performance tools."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://slayas.site/#website",
+      "name": "Slayas Site",
+      "url": "https://slayas.site/",
+      "description": "Premium game mods & high-performance tools.",
+      "author": {
+        "@id": "https://slayas.site/#person"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Slayas Site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://slayas.site/Favicon.png"
+        }
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="text-zinc-200 antialiased selection:bg-magenta selection:text-white">
 <nav class="sticky top-0 z-50 glass">
