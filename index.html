@@ -116,39 +116,71 @@
     }
   </style>
   <script type="application/ld+json">
-{
+    {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": "https://slayas.site/#person",
-      "name": "Slayas",
-      "url": "https://slayas.site/",
-      "sameAs": [
-        "https://www.youtube.com/@slaya4",
-        "https://www.instagram.com/slayax7",
-        "https://x.com/@slayax7"
-      ],
-      "jobTitle": "Game Tools Developer",
-      "description": "Creator of premium game mods and high-performance tools."
-    },
-    {
       "@type": "WebSite",
       "@id": "https://slayas.site/#website",
+      "url": "https://slayas.site/",
+      "name": "Slayas Site",
+      "description": "Premium game mods & high-performance tools. Clean execution. No clutter.",
+      "publisher": { "@id": "https://slayas.site/#organization" },
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://slayas.site/?search={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://slayas.site/#organization",
       "name": "Slayas Site",
       "url": "https://slayas.site/",
-      "description": "Premium game mods & high-performance tools.",
-      "author": {
-        "@id": "https://slayas.site/#person"
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://slayas.site/Favicon.ico",
+        "width": "32",
+        "height": "32"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Slayas Site",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://slayas.site/Favicon.png"
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "slaya.site@gmail.com",
+        "contactType": "technical support"
+      },
+      "sameAs": [
+        "https://x.com/slayax7",
+        "https://www.youtube.com/@slaya4",
+        "https://www.instagram.com/slayax7"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://slayas.site/#webpage",
+      "url": "https://slayas.site/",
+      "name": "Slayas Site - Premium Game Mods & High-Performance Tools",
+      "isPartOf": { "@id": "https://slayas.site/#website" },
+      "about": { "@id": "https://slayas.site/#organization" },
+      "description": "Premium game mods and performance tools redefined with zero clutter.",
+      "breadcrumb": { "@id": "https://slayas.site/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://slayas.site/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slayas.site/"
         }
-      }
+      ]
     }
   ]
 }
