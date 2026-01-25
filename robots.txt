@@ -31,4 +31,4 @@ User-agent: psbot
 Disallow: 
 User-agent: *
 Disallow: 
-Sitemap: https://slayas.site/
+Sitemap: https://slayas.site/sitemap.xml
