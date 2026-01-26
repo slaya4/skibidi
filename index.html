@@ -110,7 +110,7 @@
   </style>
   <!-- SCHEMA -->
   <script type="application/ld+json">
-    {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -137,13 +137,14 @@
       "url": "https://slayas.site/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://slayas.site/og-image.png", 
+        "@id": "https://slayas.site/#logo",
+        "url": "https://slayas.site/og-image.png",
         "width": "1200",
         "height": "630"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "slaya.site@gmail.com",
+        "email": "slayas.site@gmail.com",
         "contactType": "technical support"
       },
       "sameAs": [
@@ -221,7 +222,7 @@
     <div class="relative w-full max-w-lg mx-auto lg:mx-0">
       <div class="absolute inset-0 bg-magenta/20 blur-3xl rounded-full"></div>
       <div class="relative overflow-hidden rounded-[2rem] border border-white/10 card-gradient">
-        <video class="w-full h-full object-cover" src="https://slayas.site/video.mp4" autoplay muted loop playsinline></video>
+        <video class="w-full h-full object-cover" src="https://slayas.site/video.mp4" poster="https://slayas.site/og-image.png" autoplay muted loop playsinline></video>
       </div>
     </div>
   </div>
@@ -260,7 +261,7 @@
   <!-- adv referral link -->
   <div class="flex justify-center w-full py-10">
   <a href="https://adv.so/251289" target="_blank" rel="noopener">
-    <img src="https://adv.so/promo/468/60/197.jpeg" class="rounded-lg border border-white/10 hover:border-magenta/50 transition-all shadow-lg" alt="adv referral link" />
+    <img src="https://adv.so/promo/468/60/197.jpeg" class="rounded-lg border border-white/10 hover:border-magenta/50 transition-all shadow-lg" alt="Advertise with ADV - Premium Ad Network" />
   </a>
 </div>
   <!-- Footer -->
@@ -272,7 +273,7 @@
   </div>
   <div class="flex justify-center mb-10 px-4">
     <a href="https://shrinkme.io/ref/slaya7" class="hover:scale-[1.02] transition-transform duration-500 block">
-      <img src="https://shrinkme.io/banners/ref/728x90GIF.gif" class="rounded-lg border border-white/5 max-w-full h-auto" alt="shrinkme.io referral link" />
+      <img src="https://shrinkme.io/banners/ref/728x90GIF.gif" class="rounded-lg border border-white/5 max-w-full h-auto" alt="Earn money with ShrinkMe URL Shortener" />
     </a>
   </div>
   <div class="flex justify-center mb-10">
@@ -288,9 +289,7 @@
     <button id="closeTos" class="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors">
       <i class="fas fa-times text-xl"></i>
     </button>
-    <h2 class="text-3xl font-black mb-6 uppercase tracking-tighter">
-      Terms of <span class="text-magenta">Service</span>
-    </h2>
+    <h2 class="text-3xl font-black mb-6 uppercase tracking-tighter">Terms of <span class="text-magenta">Service</span></h2>
     <div class="text-zinc-400 text-sm space-y-4 max-h-[50vh] overflow-y-auto no-scrollbar pr-2 leading-relaxed">
       <p>All tools are provided as-is for educational & optimization purposes.</p>
       <p>You assume full responsibility for usage & any consequences.</p>
@@ -300,12 +299,8 @@
 <div id="adblock" class="hidden fixed inset-0 bg-black/90 backdrop-blur-xl flex items-center justify-center z-[200] p-6">
   <div class="bg-panel border border-white/10 rounded-[2rem] max-w-md w-full p-10 text-center">
     <h3 class="text-2xl font-black mb-4 uppercase tracking-tight">Adblock Detected!!!</h3>
-    <p class="text-zinc-400 mb-10 text-sm leading-relaxed">
-      Please disable your adblock & refresh.
-    </p>
-    <button onclick="location.reload()" class="px-10 py-4 rounded-2xl bg-magenta text-black font-extrabold btn-glow">
-      Refresh the page
-    </button>
+    <p class="text-zinc-400 mb-10 text-sm leading-relaxed">Please disable your adblock & refresh.</p>
+    <button onclick="location.reload()" class="px-10 py-4 rounded-2xl bg-magenta text-black font-extrabold btn-glow">Refresh the page</button>
   </div>
 </div>
   <!-- Scripts -->
@@ -430,3 +425,4 @@
 </script>
 </body>
 </html>
+
