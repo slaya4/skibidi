@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -286,7 +285,7 @@
 
   async function fetchMoneyContent() {
       const filler = document.getElementById('dynamic-filler');
-      const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking"];
+      const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
       const randomNiche = niches[Math.floor(Math.random() * niches.length)];
       try {
           const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&utf8=1`);
@@ -309,3 +308,4 @@
 </script>
 </body>
 </html>
+
