@@ -9,14 +9,14 @@
     <video:video>
       <video:thumbnail_loc>https://slayas.site/poster.png</video:thumbnail_loc>
       <video:title>Slayas Official Video</video:title>
-      <video:description>Watch the latest video from slayas.site.</video:description>
+      <video:description>Watch the latest video content from slayas.site.</video:description>
       <video:content_loc>https://slayas.site/video.mp4</video:content_loc>
     </video:video>
   </url>
 
   <url>
     <loc>https://slayas.site/map.htm</loc>
-    <lastmod>2026-01-30</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <priority>0.80</priority>
   </url>
 
