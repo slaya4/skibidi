@@ -88,11 +88,14 @@ User-agent: Discordbot
 Disallow: 
 User-agent: UptimeRobot
 Disallow: 
+User-agent: FacebookBot
+Disallow: 
 
 User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
 
 
 
