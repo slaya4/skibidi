@@ -235,7 +235,7 @@
 
 		<!-- Cuty.io -->
 	<div class="flex justify-center py-4">
-  <a href="https://upfiles.com/ref/slaya" target="_blank" rel="noopener" class="block">
+  <a href="https://cuty.io/ref/skidibigayman" target="_blank" rel="noopener" class="block">
     <img src="https://cuty.io/images/public/banners/728x90.jpg" class="rounded-xl border border-white/10 hover:border-magenta/30 transition-all max-w-full h-auto" alt="Cuty.io - Shorten, Earn and Get Paid Immediately!">
   </a>
 </div>
@@ -285,6 +285,7 @@
   </div>
 </div>
 
+	<!-- Scripts -->
 <script>
   fetch("https://counter.slaya7.workers.dev", { method: "POST" })
     .then(r => r.json())
@@ -292,7 +293,6 @@
       const v = document.getElementById("viewCount");
       if (v && typeof d.views === "number") v.textContent = d.views.toLocaleString() + " views";
     }).catch(() => { document.getElementById("viewCount").textContent = "— views"; });
-
   const PRODUCTS = [
     { title: "PassatHook", tag: "Mods", description: "A complete free external chair for CS2.", link: "" },
     { title: "SecHex", tag: "Utility", description: "A HWID Spoofer for game bans.", link: "https://shrinkme.click/SecHex" },
@@ -303,7 +303,6 @@
 	{ title: "Adobe Photoshop", tag: "Utility", description: "Full unlocked Adobe Photoshop.", link: "" },
 	{ title: "Adobe Premiere Pro", tag: "Utility", description: "Full unlocked Adobe Premiere Pro.", link: "" }
   ];
-
   function renderProducts(query = "") {
     const grid = document.getElementById("grid");
     grid.innerHTML = "";
@@ -351,7 +350,6 @@ async function fetchMoneyContent() {
   document.getElementById("openTos").onclick = () => { tos.classList.remove("hidden"); document.body.style.overflow = "hidden"; };
   document.getElementById("closeTos").onclick = () => { tos.classList.add("hidden"); document.body.style.overflow = ""; };
 </script>
-
 	<!-- Ad 2 -->
 	<script>
 (function(owyem){
@@ -365,7 +363,7 @@ s.referrerPolicy = 'no-referrer-when-downgrade';
 l.parentNode.insertBefore(s, l);
 })({})
 </script>
-	
 </body>
 </html>
+
 
