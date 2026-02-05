@@ -277,6 +277,8 @@
       const v = document.getElementById("viewCount");
       if (v && typeof d.views === "number") v.textContent = d.views.toLocaleString() + " views";
     }).catch(() => { document.getElementById("viewCount").textContent = "— views"; });
+
+	// Downloads
   const PRODUCTS = [
     { title: "PassatHook", tag: "Mods", description: "A complete free external chair for CS2.", link: "" },
     { title: "SecHex", tag: "Utility", description: "A HWID Spoofer for game bans.", link: "https://shrinkme.click/SecHex" },
@@ -287,6 +289,7 @@
 	{ title: "Adobe Photoshop", tag: "Utility", description: "Full unlocked Adobe Photoshop.", link: "" },
 	{ title: "Adobe Premiere Pro", tag: "Utility", description: "Full unlocked Adobe Premiere Pro.", link: "" }
   ];
+	
   function renderProducts(query = "") {
     const grid = document.getElementById("grid");
     grid.innerHTML = "";
@@ -371,3 +374,4 @@ l.parentNode.insertBefore(s, l);
 	
 </body>
 </html>
+
